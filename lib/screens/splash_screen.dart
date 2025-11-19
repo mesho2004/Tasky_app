@@ -11,6 +11,13 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration(seconds: 3), () {
+      Navigator.pushReplacementNamed(context, 'OnboardingScreen');
+    });
+  }
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff5F33E1),
